@@ -20,7 +20,7 @@ const routes: Routes = [
     component: PorRegionComponent,
   },
   {
-    path: 'pais:id',
+    path: 'pais/:id',
     component: VerPaisComponent,
   },
   {
