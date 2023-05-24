@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { PaisModule } from './pais/pais.module';
 import { SharedModule } from './shared/shared.module';
+import { AppRoutinModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, SharedModule, PaisModule],
+  imports: [BrowserModule, AppRoutinModule, PaisModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })
