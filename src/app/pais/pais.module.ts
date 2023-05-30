@@ -22,6 +22,7 @@ import { PaisTablaComponent } from './components/pais-tabla/pais-tabla.component
     PorRegionComponent,
     PorPaisComponent,
     VerPaisComponent,
+    PaisTablaComponent,
   ],
   imports: [CommonModule, FormsModule, RouterModule],
 })
