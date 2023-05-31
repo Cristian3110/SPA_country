@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PaisService } from '../../services/pais.service';
 
-import { switchMap } from 'rxjs/operators';
+import { switchMap, tap } from 'rxjs/operators';
+import { Country } from '../../interfaces/pais.interface';
 
 @Component({
   selector: 'app-ver-pais',
@@ -10,6 +11,8 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./ver-pais.component.css'],
 })
 export class VerPaisComponent implements OnInit {
+  pais!: Country[];
+
   constructor(
     private activedRoute: ActivatedRoute,
     private paisService: PaisService
@@ -18,11 +21,13 @@ export class VerPaisComponent implements OnInit {
   ngOnInit(): void {
     //with operators SwitchMap
     this.activedRoute.params
-      .pipe(switchMap(({ id }) => this.paisService.getPaisPorAlpha(id)))
+      .pipe(
+        switchMap(({ id }) => this.paisService.getPaisPorAlpha(id)),
+        // otro tipo de imprimir en consola con el operador TAP
+        tap(console.log)
+      )
+      .subscribe((pais: Country[]) => (this.pais = pais));
 
-      .subscribe((resp) => {
-        console.log(resp);
-      });
     // utilizando el operador SwitchMap
     // inicialilzando el component
     // desestructurando los params extrayendo el Id

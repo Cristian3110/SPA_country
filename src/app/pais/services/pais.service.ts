@@ -24,9 +24,9 @@ export class PaisService {
   }
 
   // solo se obtiene un dato que es Id
-  getPaisPorAlpha(id: string): Observable<Country> {
+  getPaisPorAlpha(id: string): Observable<Country[]> {
     const url = `${this.apiUrl}/alpha/${id}`;
 
-    return this.http.get<Country>(url);
+    return this.http.get<Country[]>(url);
   }
 }
