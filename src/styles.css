@@ -3,3 +3,12 @@
   width: 60px;
   border-radius: 5px;
 }
+
+.medium-flag {
+  width: 150px;
+  border-radius: 5px;
+}
+
+.mr-1 {
+  margin-right: 5px;
+}
