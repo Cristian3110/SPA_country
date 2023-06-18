@@ -8,7 +8,7 @@ import { Country } from '../../interfaces/pais.interface';
   styleUrls: ['./por-region.component.css'],
 })
 export class PorRegionComponent {
-  regiones: string[] = ['Asia', 'Africa', 'Americas', 'Europe', 'Oceania'];
+  regiones: string[] = ['America', 'Asia', 'Africa', 'Europe', 'Oceania'];
   paises: Country[] = [];
   regionActiva: string = '';
 
