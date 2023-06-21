@@ -3,7 +3,7 @@
 </div>
 
 <ng-template #divPais>
-  <div class="row">
+  <div class="row animate__animated animate__fadeInDown">
     <div class="col-12">
       <h1>
         <!-- País: <small>{{ pais[0].altSpellings[1] }}</small> -->
@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row animate__animated animate__fadeInDown">
     <div class="col-4">
       <h4>Bandera</h4>
       <img [src]="pais[0].flags.png" class="medium-flag" />
@@ -35,7 +35,7 @@
 
   <br />
 
-  <div class="row">
+  <div class="row animate__animated animate__fadeInUp">
     <div class="col">
       <span class="badge bg-primary mr-1"
         >{{ pais[0].translations["spa"].common }}
